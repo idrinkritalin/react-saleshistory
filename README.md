@@ -1,6 +1,6 @@
 # Sales History
 
-## Dependencies and some fancy packages used in this project:
+# Dependencies and some fancy packages used in this project:
 
 * react - https://reactjs.org
 
