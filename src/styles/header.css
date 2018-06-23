@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  background-color: #ffffff;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase
+}

@@ -1,11 +1,15 @@
 # Sales History
 
-### Dependencies and some fancy packages used in this project:
+### Frameworks and some fancy packages used in this project:
 
+* nodejs - https://nodejs.org
 * express - https://expressjs.com
 * mocker-data-generator - https://github.com/danibram/mocker-data-generator
 * react - https://reactjs.org
+* propTypes - https://www.npmjs.com/package/prop-types
 * axios - https://github.com/axios/axios
+* react-loading - https://www.npmjs.com/package/react-loading
+* react-icons - http://react-icons.github.io/react-icons
 
 ### Get it running
 

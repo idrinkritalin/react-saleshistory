@@ -20,12 +20,15 @@ const sales = {
     amount: {
         chance: 'euro()'
     },
+    method: {
+        values: ['card', 'cash']
+    },
     status: {
         values: ['successful', 'refunded', 'failed']
     }
 }
 
-//app.use(express.static('public'));
+//app.use(express.static('public'))
 
 app.get('/', (req, res) => {
   res.send('test server up and running!')
@@ -34,12 +37,15 @@ app.get('/', (req, res) => {
 app.get('/sales', (req, res) => {
   let data =
     mocker()
-      .schema('sales', sales, 100)
+      .schema('sales', sales, 2000)
       .build(function(error, data) {
         if (error) {
-            throw error
+          throw error
         }
-        res.json(data.sales)
+        // simulating some latency
+        setTimeout(function(){
+          res.json(data.sales)
+        }, 3000)
     })
 })
 

@@ -1,34 +1,45 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import '../styles/App.css'
+import Header from './Header'
+import ListSales from './ListSales'
+import * as PaymentsAPI from '../api/PaymentsAPI'
+import ReactLoading from 'react-loading'
+import '../styles/app.css'
 
 class App extends Component {
   state = {
-    sales: []
+    sales: [],
+    isLoaded: null
   }
 
   componentDidMount() {
-    axios.get(`/sales`)
+    PaymentsAPI.get('/sales')
       .then(res => {
-        const data = res.data;
-        this.setState({ sales:data });
+        const data = res.data
+        data.sort((a, b) => {
+          let dateA = new Date(a.date)
+          let dateB = new Date(b.date)
+          return dateB - dateA
+        })
+        this.setState({ sales:data, isLoaded:true })
       })
+      .catch(error => this.setState({ isLoaded:false }))
   }
 
   render() {
-    const { sales } = this.state
+    const { sales, isLoaded } = this.state
     return (
-      <div className="app">
-        <ul>
-          {sales.map(sale =>
-            <li key={sale.id}>
-              <p>{sale.id}</p>
-              <p>{sale.date}</p>
-              <p>{sale.amount}</p>
-              <p>{sale.status}</p>
-            </li>)
-          }
-        </ul>
+      <div className="container">
+        <Header/>
+        { isLoaded ? (
+          <ListSales
+            sales={sales}
+          />
+        ) : (
+          <div className="container-loading">
+            <h4>Loading the payments...</h4>
+            <ReactLoading className="loading-icon" type='spokes' color='#20384A' height={20} width={100} />
+          </div>
+        ) }
       </div>
     )
   }

@@ -1,0 +1,66 @@
+ul {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0
+}
+.list-sales {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 40%;
+  flex-direction: column;
+  justify-content: center
+}
+.list-sales h3 {
+  font-weight: normal
+}
+.list-sales ul {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px #20384A solid
+}
+.payment-icon {
+  padding-bottom: 5px
+}
+.payment-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 2px solid #20384A
+}
+.payment-item:last-child {
+  border-bottom: none
+}
+.payment-item .date {
+  flex-grow: 2;
+  flex-basis: 30%;
+  text-align: left
+}
+.payment-item .status {
+  flex-grow: 2;
+  flex-basis: 30%;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px #20384A solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px
+}
+.payment-item .amount {
+  flex-grow: 4;
+  flex-basis: 30%;
+  text-align: right
+}
+.payment-item .method {
+  flex-grow: 1;
+  flex-basis: 10%;
+  text-align: right
+}
+@media(max-width:768px){
+  .list-sales {
+    flex-basis: 90%
+  }
+}

@@ -1,3 +1,25 @@
-.app {
-  font-weight: bold;
+@font-face{font-family:'museo';font-weight:500;src:url("https://static.sumup.com/fonts/western-latin/MuseoSans_500-webfont.woff") format("woff"),url("https://static.sumup.com/fonts/western-latin/MuseoSans_500-webfont.ttf") format("truetype");}
+@font-face{font-family:'museo';font-weight:700;src:url("https://static.sumup.com/fonts/western-latin/MuseoSans_700-webfont.woff") format("woff"),url("https://static.sumup.com/fonts/western-latin/MuseoSans_700-webfont.ttf") format("truetype");}
+@font-face{font-family:'museo';font-weight:900;src:url("https://static.sumup.com/fonts/western-latin/MuseoSans_900-webfont.woff") format("woff"),url("https://static.sumup.com/fonts/western-latin/MuseoSans_900-webfont.ttf") format("truetype");}
+body {
+  font-family: 'museo', serif;
+  color: #20384A;
+  background-color: #F7FAFC;
+  margin: 0;
+  padding: 0;
+  font-size: 15px
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+.container-loading {
+  margin-top: 20vh
+}
+.container-loading h4 {
+  font-weight: normal
+}
+.loading-icon {
+  margin: 0 auto
 }
