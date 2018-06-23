@@ -2,7 +2,10 @@
 
 ### Dependencies and some fancy packages used in this project:
 
+* express - https://expressjs.com
+* mocker-data-generator - https://github.com/danibram/mocker-data-generator
 * react - https://reactjs.org
+* axios - https://github.com/axios/axios
 
 ### Get it running
 
