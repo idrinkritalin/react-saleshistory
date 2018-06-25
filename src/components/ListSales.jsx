@@ -45,6 +45,7 @@ const successfulPayment = {
 const failedPayment = {
   borderColor: 'red'
 }
+
 ListSales.propTypes = {
   sales: PropTypes.array.isRequired
 }

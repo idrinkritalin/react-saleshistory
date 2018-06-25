@@ -3,7 +3,7 @@ import Header from './Header'
 import ListSales from './ListSales'
 import * as PaymentsAPI from '../api/PaymentsAPI'
 import ReactLoading from 'react-loading'
-import '../styles/app.css'
+import '../styles/App.css'
 
 class App extends Component {
   state = {
