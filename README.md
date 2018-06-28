@@ -14,14 +14,14 @@
 ### Get it running
 
 ```bash
-npm start # Run client
-npm run start:server # Run server
+npm start # Run client + server
+npm run start:server # Run server only (if you want to use for other purposes)
 npm test # Run tests
 ```
 
 ## Summary of the task
 
-### Phase 1: Basic list of sales
+### ✅ Phase 1: Basic list of sales
 
 Your task is to generate a dataset containing 6 months worth of sales, and then display that in a simple list view. You must generate the data programmatically, and may not use a third-party generator. You can use the Express server provided to create an endpoint, which will provide a subset of this data to the client (perhaps initially limited to 100 sales items or so). The sales should be listed with newest sales first, and the UI could look like this.
 

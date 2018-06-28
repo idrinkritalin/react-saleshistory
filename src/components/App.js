@@ -16,10 +16,10 @@ class App extends Component {
       .then(res => {
         const data = res.data
         data.sort((a, b) => {
-          let dateA = new Date(a.date)
-          let dateB = new Date(b.date)
-          return dateB - dateA
-        })
+            let dateA = new Date(a.date)
+            let dateB = new Date(b.date)
+            return dateB - dateA
+          })
         this.setState({ sales:data, isLoaded:true })
       })
       .catch(error => this.setState({ isLoaded:false }))
