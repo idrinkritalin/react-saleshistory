@@ -20,7 +20,8 @@ ul {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  border: 2px #20384A solid
+  border: 2px #20384A solid;
+  width: 100%
 }
 .payment-icon {
   padding-bottom: 5px

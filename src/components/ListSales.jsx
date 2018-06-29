@@ -8,11 +8,16 @@ const ListSales = (props) => (
   <div className="list-sales">
     <h3><Money className="payment-icon"/> Sales History</h3>
     <ul>
-      {props.sales.map(sale =>
-        <li className="payment-item" key={sale.id}>
+      {props.sales.map(sale => {
+        let statusStyle = sale.status === 'failed' ? statusFailed : statusSuccessful
+        let paymentStyle = sale.status === 'failed' ? paymentFailed : paymentSuccessfull
+
+        return <li className="payment-item" key={sale.id}>
           <p className="date">{sale.date}</p>
-          <p style={sale.status === 'failed' ? failedPayment : successfulPayment } className="status">{sale.status}</p>
-          <p style={sale.status === 'failed' ? failedText : successfulText } className="amount">
+          <p style={statusStyle} className="status">
+            {sale.status}
+          </p>
+          <p style={paymentStyle} className="amount">
               {sale.status === 'refunded' && '-'}
               {sale.amount}
           </p>
@@ -25,24 +30,25 @@ const ListSales = (props) => (
             }
           </p>
         </li>
+        }
       )}
     </ul>
   </div>
 )
 
-const failedText = {
-  textDecoration: 'line-through'
-}
-
-const successfulText = {
+const paymentSuccessfull = {
   textDecoration: 'none'
 }
 
-const successfulPayment = {
-  borderColor: '#20384A'
+const paymentFailed = {
+  textDecoration: 'line-through'
 }
 
-const failedPayment = {
+const statusSuccessful = {
+  borderColor: '#223848'
+}
+
+const statusFailed = {
   borderColor: 'red'
 }
 

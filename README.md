@@ -27,7 +27,7 @@ Your task is to generate a dataset containing 6 months worth of sales, and then 
 
 ![Phase 1](docs/phase_1.png)
 
-### Phase 2: Filtering sales by payment method & status
+### ✅ (feature needs to be moved to server side) Phase 2: Filtering sales by payment method & status
 
 In this phase, you should add filtering to your API, and allow the client to update these filters. It should be possible to filter the transactions by payment type (card or cash) and payment status (successful, failed, refunded), or any combination of these filters.
 

@@ -9,4 +9,9 @@ const headers = {
   'Authorization': token
 }
 
-export const get = server => axios.get(server, { headers })
+export const get = (server, filter = {}) => axios.get(server, {
+  params: {
+    filter
+  },
+  headers
+})
