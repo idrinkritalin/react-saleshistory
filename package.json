@@ -7,7 +7,7 @@
   "author": "Stefano Veltri",
   "repository": {
     "type": "git",
-    "url": "https://github.com/idrinkritalin/sumup-trial"
+    "url": "https://github.com/idrinkritalin/react-saleshistory"
   },
   "dependencies": {
     "axios": "^0.16.2",
