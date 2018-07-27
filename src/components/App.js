@@ -23,19 +23,16 @@ class App extends Component {
       .catch(error => this.setState({ isLoaded:false }))
   }
 
-  // logic needs top be moved on server side
   onFilter = (filter) => {
-    this.reset()
-    PaymentsAPI.get('/sales')
+    PaymentsAPI.get(`/sales?status=${filter}`)
       .then(res => {
         const data = res.data
-        const filteredData = data.filter(sale => sale.status === filter)
-        this.setState({ sales:filteredData, isLoaded:true })
+        this.setState({ sales:data, isLoaded:true })
       })
       .catch(error => this.setState({ isLoaded:false }))
   }
 
-  // logic needs top be moved on server side
+  // implement feature in the UI
   groupByDate(){
     PaymentsAPI.get('/sales')
       .then(res => {
@@ -54,10 +51,6 @@ class App extends Component {
         this.setState({ salesByDate, isLoaded:true })
       })
       .catch(error => this.setState({ isLoaded:false }))
-  }
-
-  reset() {
-    this.setState({ sales:[], isLoaded:false })
   }
 
   render() {

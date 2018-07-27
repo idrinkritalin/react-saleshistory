@@ -1,9 +1,9 @@
 {
-  "name": "SumUp",
-  "version": "0.1.7",
+  "name": "saleshistory",
+  "version": "0.1.8",
   "private": true,
   "proxy": "http://localhost:3001",
-  "description": "Sales History made in React and NodeJS",
+  "description": "Sales History made in React and NodeJS server",
   "author": "Stefano Veltri",
   "repository": {
     "type": "git",

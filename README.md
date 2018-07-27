@@ -19,7 +19,7 @@ npm run start:server # Run server only (if you want to use for other purposes)
 npm test # Run tests
 ```
 
-## Summary of the task
+## Summary of the project
 
 ### ✅ Phase 1: Basic list of sales
 
@@ -38,17 +38,3 @@ In this phase, you should add filtering to your API, and allow the client to upd
 Finally, you'll put the finishing touches on your Sales History. First, each day should have its own section in the UI, visually-speaking. Above each day, you should list the date and the total from the successful transactions that happened that day. Lastly, you should add a "Load More" button which will allow merchants to see older transactions.
 
 ![Phase 3](docs/phase_3.png)
-
-## Getting started
-
-### Guiding principles
-
-* Strive for a balance between 'doing it right' and 'not overengineering' based on the task
-* Think about code you would put in a shared codebase
-* When in doubt, ask!
-
-### Your tools
-
-* An Express server, equipped with Nodemon so it restarts upon changes
-* React base app with a library for HTTP requests (axios)
-* Frontend is built by webpack, based on create-react-app

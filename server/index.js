@@ -1,14 +1,14 @@
 import express from 'express'
 import { randData } from './randData'
 import { sortByDate } from './helpers'
-// import mocker from 'mocker-data-generator'
+import mocker from 'mocker-data-generator'
 
 const app = express()
 const port = 3001
 
-// app.use(express.static('public'))
+app.use(express.static('public'))
 
-// mocking data with Mocker
+///// mocking data with Mocker
 // const sales = {
 //     id: {
 //         casual: 'uuid'
@@ -48,8 +48,6 @@ const port = 3001
 //     })
 // })
 
-
-// mocking data without using Mocker
 const sales = randData(100)
 const sortedSales = sortByDate(sales)
 
@@ -58,12 +56,18 @@ app.get('/', (req, res) => {
 })
 
 app.get('/sales', (req, res) => {
-  let { type, status } = req.query
+  const { method, status } = req.query
+  const request = req.query
 
-  // simulating some latency
-  setTimeout(function(){
+  if('status' in request) {
+    let filteredByStatus = sortedSales.filter(sale => sale.status === status)
+    res.send(filteredByStatus)
+  } else if('method' in request) {
+    let filteredByType = sortedSales.filter(sale => sale.method === method)
+    res.send(filteredByType)
+  } else {
     res.send(sortedSales)
-  }, 3000)
+  }
 })
 
 app.get('*', (req, res) => {
