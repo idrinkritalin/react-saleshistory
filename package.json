@@ -2,7 +2,7 @@
   "name": "saleshistory",
   "version": "0.1.9",
   "private": true,
-  "proxy": "https://secret-spire-54217.herokuapp.com:3001",
+  "proxy": "localhost:3001",
   "description": "Sales History made in React and NodeJS server",
   "author": "Stefano Veltri",
   "repository": {
