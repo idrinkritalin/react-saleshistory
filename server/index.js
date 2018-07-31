@@ -8,6 +8,34 @@ const PORT = 3001
 
 app.use(express.static('public'))
 
+const sales = randData(100)
+const sortedSales = sortByDate(sales)
+
+app.get('/', (req, res) => {
+  res.send('test server up and running!')
+})
+
+app.get('/sales', (req, res) => {
+  const { method, status } = req.query
+  const request = req.query
+
+  if('status' in request) {
+    let filteredByStatus = sortedSales.filter(sale => sale.status === status)
+    res.send(filteredByStatus)
+  } else if('method' in request) {
+    let filteredByType = sortedSales.filter(sale => sale.method === method)
+    res.send(filteredByType)
+  } else {
+    res.send(sortedSales)
+  }
+})
+
+app.get('*', (req, res) => {
+  res.send('Error 404, please refer to /sales for listing the payments')
+})
+
+app.listen(PORT, () => { console.log(`Sales History app listening on port ${PORT}`) })
+
 ///// mocking data with Mocker
 // const sales = {
 //     id: {
@@ -47,32 +75,3 @@ app.use(express.static('public'))
 //         }, 3000)
 //     })
 // })
-
-const sales = randData(100)
-const sortedSales = sortByDate(sales)
-
-app.get('/', (req, res) => {
-  res.send('test server up and running!')
-})
-
-app.get('/sales', (req, res) => {
-  const { method, status } = req.query
-  const request = req.query
-
-  if('status' in request) {
-    let filteredByStatus = sortedSales.filter(sale => sale.status === status)
-    res.send(filteredByStatus)
-  } else if('method' in request) {
-    let filteredByType = sortedSales.filter(sale => sale.method === method)
-    res.send(filteredByType)
-  } else {
-    res.send(sortedSales)
-  }
-})
-
-app.get('*', (req, res) => {
-  res.send('Error 404, please refer to /sales for listing the payments')
-})
-
-// localhost:3001
-app.listen(PORT, () => { console.log(`Sales History app listening on port ${PORT}`) })
