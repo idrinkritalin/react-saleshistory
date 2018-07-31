@@ -4,7 +4,7 @@ import { sortByDate } from './helpers'
 import mocker from 'mocker-data-generator'
 
 const app = express()
-const port = 3001
+const PORT = 3001
 
 app.use(express.static('public'))
 
@@ -75,6 +75,4 @@ app.get('*', (req, res) => {
 })
 
 // localhost:3001
-app.listen(port, () => {
-  console.log(`Sales History app listening on port ${port}`)
-})
+app.listen(PORT, () => { console.log(`Sales History app listening on port ${PORT}`) })

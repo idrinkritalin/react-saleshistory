@@ -1,6 +1,6 @@
 {
   "name": "saleshistory",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "proxy": "http://localhost:3001",
   "description": "Sales History made in React and NodeJS server",
