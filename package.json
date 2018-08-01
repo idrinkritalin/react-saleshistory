@@ -2,7 +2,7 @@
   "name": "saleshistory",
   "version": "0.1.9",
   "private": true,
-  "proxy": "localhost:3001",
+  "proxy": "http://localhost:5000",
   "description": "Sales History made in React and NodeJS server",
   "author": "Stefano Veltri",
   "repository": {
@@ -12,7 +12,6 @@
   "dependencies": {
     "axios": "^0.16.2",
     "express": "^4.16.3",
-    "mocker-data-generator": "^2.6.4",
     "prop-types": "^15.6.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -21,11 +20,11 @@
     "react-scripts": "1.0.14"
   },
   "scripts": {
-    "start": "react-scripts start & npm run start:server",
+    "start": "nodemon index.js --exec babel-node --presets es2015 --watch index.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "start:server": "nodemon server/index.js --exec babel-node --presets es2015 --watch server/*.js"
+    "start:server": "nodemon index.js --exec babel-node --presets es2015 --watch index.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

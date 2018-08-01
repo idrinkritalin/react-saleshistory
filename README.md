@@ -4,7 +4,6 @@
 
 * nodejs - https://nodejs.org
 * express - https://expressjs.com
-* mocker-data-generator - https://github.com/danibram/mocker-data-generator
 * react - https://reactjs.org
 * propTypes - https://www.npmjs.com/package/prop-types
 * axios - https://github.com/axios/axios
