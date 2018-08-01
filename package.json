@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "nodemon index.js --exec babel-node --presets es2015 --watch index.js",
-    "heroku-postbuild": "cd client && yarn run build"
+    "heroku-postbuild": "cd client && npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
