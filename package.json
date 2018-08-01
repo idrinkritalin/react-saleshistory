@@ -1,6 +1,9 @@
 {
   "name": "saleshistory",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.6.0"
+  },
   "main": "index.js",
   "description": "Sales History server",
   "author": "Stefano Veltri",

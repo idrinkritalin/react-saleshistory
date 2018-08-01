@@ -3,7 +3,7 @@
   "version": "0.1.7",
   "private": true,
   "proxy": "http://localhost:5000",
-  "description": "Sales History made in React and NodeJS server",
+  "description": "Sales History client",
   "author": "Stefano Veltri",
   "repository": {
     "type": "git",
