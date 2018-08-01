@@ -1,0 +1,27 @@
+{
+  "name": "saleshistory",
+  "version": "0.1.7",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "description": "Sales History made in React and NodeJS server",
+  "author": "Stefano Veltri",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idrinkritalin/react-saleshistory"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-icons": "^2.2.7",
+    "react-loading": "^2.0.2",
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
