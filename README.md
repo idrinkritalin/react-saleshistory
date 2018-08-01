@@ -1,9 +1,12 @@
 # Sales History
 
-### Frameworks and some fancy packages used in this project:
+## Frameworks and some fancy packages used in this project:
 
+### Server
 * nodejs - https://nodejs.org
 * express - https://expressjs.com
+
+### Client
 * react - https://reactjs.org
 * propTypes - https://www.npmjs.com/package/prop-types
 * axios - https://github.com/axios/axios
@@ -11,15 +14,17 @@
 * react-icons - http://react-icons.github.io/react-icons
 
 ### Get it running
-
 ```bash
-npm start # Run client + server
-npm run start:server # Run server only (if you want to use for other purposes)
-npm test # Run tests
+npm start # Run server
+cd client # navigate into the client folder
+npm start # Run client
+npm test # Run tests (in case you want)
 ```
 
-## Summary of the project
+### Demo version
+[Sales History - hosted on Heroku](https://crae-saleshistory.herokuapp.com "Sales History")
 
+## Summary of the project
 ### ✅ Phase 1: Basic list of sales
 
 Your task is to generate a dataset containing 6 months worth of sales, and then display that in a simple list view. You must generate the data programmatically, and may not use a third-party generator. You can use the Express server provided to create an endpoint, which will provide a subset of this data to the client (perhaps initially limited to 100 sales items or so). The sales should be listed with newest sales first, and the UI could look like this.

@@ -3,7 +3,7 @@ import '../styles/header.css'
 
 const Header = (props) => (
   <header>
-    <h1>SALES LIST</h1>
+    <h1>SALES HISTORY</h1>
   </header>
 )
 
