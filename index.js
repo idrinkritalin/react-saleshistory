@@ -6,14 +6,10 @@ import { sortByDate } from './helpers/sortByDate'
 const app = express()
 const PORT = process.env.PORT || 5000
 
-app.use(express.static(path.join(__dirname, '../build')))
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 const sales = randData(100)
 const sortedSales = sortByDate(sales)
-
-app.get('/', (req, res) => {
-  res.send('test server up and running!')
-})
 
 app.get('/sales', (req, res) => {
   const { method, status } = req.query
